@@ -8,13 +8,14 @@ const Item = require('../../models/Item')
 
 
 //@route Get api/item
-//@desc Get All Items
+//@desc Creat a post
 //@access Public
 
-router.get('/', (req, res) => {
-  Item.find()
-    .sort({ data: -1 })
-    .then(Items => res.json(Items))
+router.post('/', (req, res) => {
+  const newItem = new Item({
+    name: req.body.name
+  })
+  newItem.save().then(item => res.json(item))
 });
 debugger
 module.exports = router;
