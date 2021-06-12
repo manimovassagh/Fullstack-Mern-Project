@@ -20,6 +20,9 @@ export default function AppNavbar() {
   return (
     <div>
       <Navbar color="dark" dark expand="sm" className="mb-5">
+        <Container>
+          <NavbarBrand href="/">Mani Einkaufsliste</NavbarBrand>
+        </Container>
       </Navbar>
     </div>
   )
