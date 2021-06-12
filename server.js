@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const items = require('./routes/apis/Items');
+
 const app = express();
 
 // use body Parse as middleware
@@ -13,7 +15,11 @@ const db = require('./config/keys').mongoURI;
 // connect to mongoodb 
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log('MongoDB Connected')).catch(err => console.log(err));
 
+//use Routs
+app.use('/api/items', items);
+
+
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => console.log(`Server Started on port on ${port}`));
+app.listen(port, () => console.log(`Server Started on port ${port} Like Butter !`));
 
