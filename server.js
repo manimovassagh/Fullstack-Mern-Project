@@ -8,4 +8,12 @@ const app = express();
 
 app.use(bodyParser.json());
 
+//DB Config
+const db = require('./config/keys').mongoURI;
+// connect to mongoodb 
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => mongoose.connect.log('connected')).catch(err => console.log(err));
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => console.log(`Server Started on port on ${port}`));
 
