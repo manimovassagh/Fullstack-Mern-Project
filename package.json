@@ -1,0 +1,19 @@
+{
+  "name": "fullstackmernproject",
+  "version": "1.0.0",
+  "description": "Full STack MERN Project to Practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manimovassagh/Fullstack-Mern-Project.git"
+  },
+  "author": "Mani Movassagh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manimovassagh/Fullstack-Mern-Project/issues"
+  },
+  "homepage": "https://github.com/manimovassagh/Fullstack-Mern-Project#readme"
+}
