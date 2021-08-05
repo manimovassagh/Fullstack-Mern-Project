@@ -13,7 +13,7 @@ import { useState } from 'react';
 
 export default function AppNavbar() {
   const [open, setOpen] = useState(false)
-
+//Toggler for UI
   const toggle = () => {
     setOpen(true)
   }
